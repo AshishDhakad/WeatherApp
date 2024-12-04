@@ -1,0 +1,306 @@
+
+
+.weather-app {
+    display: flex;
+    height: 90vh;
+    color: white;
+    padding:2%;
+    margin-top: 2%;
+    font-family: Arial, sans-serif;
+  }
+  
+
+  .weather-left {
+    flex: 1;
+    background-image: url('https://www.rd.com/wp-content/uploads/2019/11/15.-111_180628-0762.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    filter: brightness(80%);
+    
+  }
+  
+  .location {
+    font-size: 2rem;
+    margin: 0;
+  }
+
+  .toggle-unit{
+      width: 100px;
+      border-radius: 10px;
+      justify-content: center;
+      background-color: rgb(193, 0, 16);
+      margin-bottom: 20px;
+  }
+  .time-container {
+    margin: 15px 0;
+    display: flex;
+   align-items: center;
+  }
+  
+  
+  .time {
+    font-size: 1rem;
+  }
+  
+  .date {
+    font-size: 2rem;
+  }
+  
+  .temperature-container {
+    margin-top: 0px;
+    display: flex;
+  }
+  
+  .forecast{
+    margin-top: 0px;
+  }
+  
+
+  .weather-right {
+    width: 100vw;
+    flex: 2;
+    background: #1a4587;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url('https://th.bing.com/th/id/R.678b493081e4245c38344832464babc7?rik=ZJRIAtjiUTzecw&riu=http%3a%2f%2fgetwallpapers.com%2fwallpaper%2ffull%2ff%2f4%2f3%2f567367.jpg&ehk=7gmano7yqEvKnSKFsOe9pKpZqo76zPq6nmaelHrkp%2f0%3d&risl=&pid=ImgRaw&r=0');
+    background-size: cover;
+    background-position: center;
+  }
+
+
+  .weather-status {
+    display: flex;
+    align-items: center;
+    margin-bottom:0px
+  }
+  .weather-status p{
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  .icon img {
+    width: 200px;
+    height: 200px;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .search-bar {
+    align-items: center;
+  }
+  
+  .search-input {
+    padding: 10px;
+    border-radius: 5px 0 0 5px;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    width:300px;
+    margin-bottom: 20px;
+  }
+
+  @media (max-width: 867px) {
+    .search-input {
+      width: 200px;
+    }
+    .previous-cities{
+      display: none;
+    }
+  }
+  
+  .search-button {
+    padding: 10px;
+    background: #1c2128;
+    color: white;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+  }
+  
+  .weather-details {
+    text-align: left;
+    line-height: 1.5;
+  }
+  
+  .weather-details p {
+    margin: 5px 0;
+  }
+  
+  .forecast-item{
+   display: flex;
+   flex-direction:row;
+  }
+
+  .previous-cities{
+    color: rgb(251, 251, 251);
+    list-style: none; 
+      padding: 0;
+      margin: 0;
+  }
+  
+  .previous-cities h4{
+   margin-left: 35px;
+  }
+  .previous-cities li{
+   
+    color:#1C00ff00;
+  }
+  .diff{
+    display: flex;
+    width: 100%;
+    gap :100px;
+    margin-top: 20px;
+   
+    margin-left: 0%;
+    
+  }
+
+
+  @media (max-width:727px) {
+    .weather-left{
+     flex: 0;
+    }
+  }
+
+ 
+
+  @media (max-width: 727px) {
+    
+  
+    .weather-right {
+      padding: 10px;
+      text-align: center;
+      background-size: cover;
+    }
+  
+    .search-bar {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  
+    .search-input {
+      width: 80%; 
+    }
+  
+    .favCity {
+      width: 100%; 
+      gap: 5px; 
+      overflow-x: auto; 
+    }
+  
+    .cities {
+      width: 45%; 
+      margin: 5px auto; 
+    }
+  
+    .diff {
+      flex-direction: column; 
+      gap: 10px;
+    }
+  
+    .favorite-cities-container {
+      padding: 5px; 
+    }
+    .toggle-unit{
+      margin-bottom: 10px;
+    }
+  }
+  
+
+
+  @media (max-width: 727px) {
+    .weather-app {
+      display: flex;
+      flex-direction: column; 
+      height: auto; 
+      overflow: hidden; 
+    }
+  
+    
+    .weather-left {
+      flex: none;
+      width: 100%; 
+      height: 300px; 
+      overflow-y: auto; 
+      padding: 10px;
+      background-size: cover;
+      background-position: center;
+      scrollbar-width: thin; 
+      scrollbar-color: rgba(0, 0, 0, 0.5) transparent; 
+    }
+  
+    .weather-left::-webkit-scrollbar {
+      width: 8px; 
+    }
+  
+    .weather-left::-webkit-scrollbar-thumb {
+      background-color: rgba(0, 0, 0, 0.5); 
+      border-radius: 4px;
+    }
+  
+    .weather-left::-webkit-scrollbar-track {
+      background-color: transparent; 
+    }
+  
+    
+    .time-container, .date {
+      display: none; 
+    }
+  
+  
+    .weather-right {
+      flex: none;
+      width: 100%; 
+      padding: 10px;
+      background-size: cover;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start; 
+    }
+  
+   
+    .search-bar {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  
+    .search-input {
+      width: 80%;
+    }
+  
+   
+    .favCity {
+      width: 100%;
+      gap: 5px; 
+      overflow-x: auto; 
+    }
+  
+    .cities {
+      width: 45%; 
+      margin: 5px auto; 
+    }
+  
+   
+    .diff {
+      flex-direction: column; 
+      gap: 10px; 
+    }
+  
+    .favorite-cities-container {
+      padding: 5px; 
+    }
+  }
+  
+
+
+
+  
